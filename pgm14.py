@@ -1,0 +1,20 @@
+dictionary=dict()
+n=int(input("Enter the length of the dictionary:"))
+for i in range(0,n):
+    key=input("Enter the key:")
+    val=input("Enter the value:")
+    dictionary[key]=val
+
+print(dictionary)
+print("Sorted dictionary by key in ascending")
+sorted_dict=dict(sorted(dictionary.items()))
+print(sorted_dict)
+print("Sorted dictionary by key in descending")
+sorted_dict=dict(sorted(dictionary.items(),reverse=True))
+print(sorted_dict)
+print("Sorted dictionary by values in ascending")
+sorted_dict=dict(sorted(dictionary.items(),key=lambda x:x[1]))
+print(sorted_dict)
+print("Sorted dictionary by values in descending")
+sorted_dict=dict(sorted(dictionary.items(),key=lambda x:x[1],reverse=True))
+print(sorted_dict)
